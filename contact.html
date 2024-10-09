@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Matemasie&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <img src="photos/logo.jpg" alt="Logo" />
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About<span style="color: #f7f7f7">-</span>Me</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="project.html">Projects</a>
+      <div class="dropdown">
+        <a href="#">Others</a>
+        <div class="dropdown-content">
+          <a href="skills.html">Skills</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="resume.html">Resume</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="contact-form-container">
+      <div class="form">
+        <h1>Contact Form</h1>
+        <form id="contact-form" action="mailto:987636@win.edu.au" enctype="text/plain" method="post" onsubmit="return validateForm()" >
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="John Doe">
+
+          <label for="phone">Phone No:</label>
+          <input type="tel" id="phone" name="phone" placeholder="0415207486">
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com">
+    
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="subject">
+    
+          <label for="description">Description:</label>
+          <textarea id="message" name="message" rows="6"></textarea>
+    
+          <button type="submit">Submit</button>
+        </form>
+
+        <script>
+                  document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); 
+          
+          var name = document.getElementById('name').value.trim();
+          var phone = document.getElementById('phone').value.trim();
+          var email = document.getElementById('email').value.trim();
+          var subject = document.getElementById('subject').value.trim();
+          var message = document.getElementById('message').value.trim();
+          
+          // Validation checks
+          if (name === '') {
+            alert('Please enter your name.');
+            return false;
+          } else if (!/^[a-zA-Z\s]+$/.test(name)) {
+            alert('Name should contain only alphabetic characters.');
+            return false;
+          }
+          
+          if (phone === '') {
+            alert('Please enter your phone number.');
+            return false;
+          } else if (!/^\d{10}$/.test(phone)) {
+            alert('Phone number should have exactly 10 digits.');
+            return false;
+          }
+          
+          if (email === '') {
+            alert('Please enter your email address.');
+            return false;
+          } else if (!/\S+@\S+\.\S+/.test(email)) {
+            alert('Please enter a valid email address.');
+            return false;
+          }
+          
+          if (subject === '') {
+            alert('Please enter a subject.');
+            return false;
+          } else if (subject.length > 50) {
+            alert('Subject should not exceed 50 characters.');
+            return false;
+          }
+          
+          if (message === '') {
+            alert('Please enter a message.');
+            return false;
+          } else if (message.length > 500) {
+            alert('Message should not exceed 500 characters.');
+            return false;
+          }
+          
+          // Create the mailto link manually after validation passes
+          var mailtoLink = 'mailto:987636@win.edu.au'
+              + '?subject=' + encodeURIComponent(subject)
+              + '&body=' + encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Phone: ' + phone + '\n' +
+                'Email: ' + email + '\n\n' +
+                'Message:\n' + message
+              );
+
+          // Trigger the mailto link
+          window.location.href = mailtoLink;
+        });
+
+        </script>
+      </div>
+    </div>
+  </div>
+    <div class="footer">
+      <p><b>© Sujan Thapa 2024. All Rights Reserved.</b></p>
+      <div class="socials">
+        <a
+          href="https://www.facebook.com/profile.php?id=100036289867277&mibextid=LQQJ4d"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/sujanthapa501?igsh=Mms2emkyd29uOHky&utm_source=qr"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/sujan-thapa-616583282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.youtube.com/@TechnicalGuruji"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

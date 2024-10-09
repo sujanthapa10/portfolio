@@ -1,0 +1,445 @@
+*{
+    margin: 0;
+}
+
+.navigation {
+    background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.navigation img {
+  margin-right: auto;  
+  max-width: 100px; 
+  width: 6%;
+  height: auto;
+  padding-left: 50px;
+  cursor: pointer;
+}
+
+.navigation a {
+  margin-left: 20px; 
+  text-decoration: none;
+  color: #333; 
+  font-size: 30px;
+  word-spacing: 40px;
+  padding-right: 50px;
+  transition: 1.2s;
+  display: inline-block;
+}
+
+.navigation a:hover {
+  color: #1E90FF;
+  scale: 1.1;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;  
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  
+  border-radius: 4px;  
+  z-index: 1;
+  padding: 5px 0;  
+}
+
+
+.dropdown-content a {
+  color: #000000;  
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.5 ease;
+  font-size: x-large;  
+}
+
+
+.dropdown-content a:hover {
+  color: #007bff;  
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.navigation {
+  padding: 10px 20px; 
+}
+
+.intro h1{
+    text-align: center;
+    font-family: "Matemasie", sans-serif;
+    word-spacing: 20px;
+    font-size: 55px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.intro img{
+    float: left;
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    padding-left: 20px;
+    padding-right: 40px;
+    
+}
+
+.intro p{
+    font-size: 20px;
+    font-family: cursive;
+    word-spacing: 10px;
+    padding-right: 40px;
+    padding-top: 60px;
+}
+
+.footer{
+    padding-top: 50px;
+    margin-bottom: 0;
+    background-color: #f7f7f7;
+}
+
+.footer p{
+    padding-top: 5px;
+    text-align: center;
+    word-spacing: 3px;
+    font-size: 20px;
+}
+
+.socials{
+    padding-top: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+    font-size: 25px;
+    word-spacing: 25px;
+}
+
+.socials a{
+    font-size: 30px;
+    text-decoration: none;
+    transition: 1.2s;
+}
+
+.socials a:hover{
+    color:#007bff;
+}
+
+.gallery-container{
+  padding: 50px 200px;
+  width: 70%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery-container img{
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid rgba(225,225,225, 0.1);
+  transition: all ease-in-out 0.5s;
+}
+
+.gallery-container img:hover{
+  width: 80%;
+}
+
+.contact-form-container {
+  margin-top: -10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-form-container h1 {
+  color: #fff; 
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 103, 159);
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; 
+  max-width: 500px;
+}
+
+form label {
+  font-family: cursive;
+  color: #fff; 
+  display: block;
+  margin-bottom: 9px;
+}
+
+form input,
+form textarea {
+  font-family: cursive;
+  background-color: #131313; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form textarea {
+  height: 100px; 
+}
+
+button[type="submit"] {
+  background-color: #131313;
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #00476d;
+  cursor: pointer;
+}
+
+.aboutme{
+  margin: 50px;
+  font-family: cursive;
+}
+
+.aboutme p{
+  font-size: 20px;
+  word-spacing: 10px;
+}
+
+.skills {
+  padding: 10px; 
+}
+
+.aboutme h1 {
+  text-align: center;
+  margin: 30px;
+  font-size: 50px;
+}
+
+.skills img {
+  aspect-ratio: 1 / 1;
+  margin: 20px; 
+  width: 15%; 
+  height: auto;
+  transition:  0.3s ease-in-out; 
+}
+
+.skills img:hover {
+  width: 18%; 
+}
+
+.goal {
+  display: flex;
+  align-items: center; 
+  padding: 20px;
+}
+
+.goal p {
+  margin-left: 30px; 
+  font-size: 30px; 
+}
+
+.goal img {
+  margin: 15px;
+  width: 100%; 
+  height: auto;
+}
+
+.projects-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-container h1 {
+  font-family: cursive;
+  text-align: center;
+  color: #000000;
+}
+
+.project {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.project h2 {
+  font-family: cursive;
+  color:#000000;
+}
+
+.project p {
+  font-family: cursive;
+  margin: 10px 0;
+}
+
+.tech-used {
+  display: block;
+  font-weight: bold;
+  color: #555;
+}
+
+.test h1{
+  text-align: center;
+  margin: 30px;
+}
+
+.testimonials{
+  margin: 50px;
+  padding-bottom: 50px;
+}
+.testimonials img{
+  float: left;
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+  padding-left: 20px;
+  padding-right: 40px;
+  
+}
+
+.testimonials p{
+  font-size: 20px;
+  font-family: cursive;
+  word-spacing: 10px;
+  padding-right: 40px;
+  padding-top: 60px;
+}
+
+.resume p{
+  font-family: cursive;
+  font-size: 20px;
+  word-spacing: 10px;
+  margin: 30px;
+}
+
+.resume h1, h3 {
+  font-family: cursive;
+  text-align: center;
+  margin: 30px;
+}
+
+.resume h1{
+  font-size: 50px;
+}
+
+.resume img{
+  width: 30%;
+  height: auto;
+  margin: 30px;
+  border-radius: 50%;
+}
+
+#resume{
+  display: flex;
+  align-items: right;
+}
+
+.download{
+  font-family: cursive;
+  text-align: center;
+  margin: 30px;
+  font-size: 20px;
+}
+
+.skillpage{
+  margin: 30px;
+  font-family: cursive;
+}
+
+.skillpage h1{
+  text-align: center;
+  font-size: 40px;
+}
+.skillpage h2{
+  font-size: 35px;
+  padding: 20px 30px;
+}
+
+.skilltype1 ul{
+  padding: 0 350px;
+}
+
+.skilltype1 ul li{
+  font-size: 20px;
+}
+
+.skilltype1{
+  padding: 10px;
+
+}
+
+.skilltype1 img{
+  float:right;
+  width: 30%;
+  height: auto;
+  margin-left: 30px;
+  margin-right: 200px;
+  border-radius: 20%;
+  transition: 1.5s;
+}
+
+.skilltype1 img:hover{
+  scale: 1.1;
+}
+
+
+.skilltype2 ul{
+  padding: 0 350px;
+}
+
+.skilltype2 ul li{
+  font-size: 20px;
+}
+
+.skilltype2{
+  padding: 10px;
+
+}
+
+.skillpage p{
+  padding: 30px;
+  font-family: cursive;
+  font-size: 25px;
+}
+
+.skilltype2 img{
+  float:right;
+  width: 30%;
+  height: auto;
+  margin-right: 200px;
+  margin-left: 30px;
+  border-radius: 20%;
+  transition: 1.5s;
+}
+
+.skilltype2 img:hover{
+  scale: 1.1;
+}
+
